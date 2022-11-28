@@ -1,0 +1,10 @@
+.work {
+    background-color: darkgray;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.description {
+    margin: 0 auto;
+}
