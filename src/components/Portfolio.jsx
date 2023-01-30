@@ -21,7 +21,7 @@ export const Portfolio = ({ headerTop, darkTheme, languageEN }) => {
         name: "",
         link: "",
       },
-      thumbImage: "images/projects/expected.jpg",
+      thumbImage: "images/projects/expecting.jpg",
       sliderImages: [],
     },
     {
