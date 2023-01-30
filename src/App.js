@@ -69,13 +69,7 @@ export function App() {
             <AboutMe headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
             <Skills headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
             <Background headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
-
-            <Portfolio
-              headerTop={headerTop}
-              darkTheme={darkTheme}
-              languageEN={languageEN}
-            ></Portfolio>
-
+            <Portfolio headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
             <Contacts headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
           </div>
           

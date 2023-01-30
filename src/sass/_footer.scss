@@ -182,6 +182,9 @@ html[dir="rtl"] #footer {
   li:hover.social-icons-dribbble a, &.social-icons-colored li.social-icons-dribbble a {
     color: $dribbble;
   }
+  li:hover.social-icons-codewars a, &.social-icons-colored li.social-icons-codewars a {
+    color: $codewars;
+  }
   li:hover.social-icons-github a, &.social-icons-colored li.social-icons-github a {
     color: $github;
   }
