@@ -13,7 +13,7 @@ export const Portfolio = ({ headerTop, darkTheme, languageEN }) => {
 
   const projectsData = [
     {
-      titleEN: "Expected:)",
+      titleEN: "Expecting:)",
       titleRU: "Ожидается:)",
       projectInfoEN: "",
       projectInfoRU: "",
