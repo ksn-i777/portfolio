@@ -79,7 +79,7 @@ export const SendForm = React.memo(({ darkTheme, languageEN }) => {
               type="email"
               className="form-control"
               required
-              placeholder={languageEN ? "Email" : "Эл.почта"}
+              placeholder={languageEN ? "Email" : "Электронная почта"}
             />
           </div>
           <div className="col">
