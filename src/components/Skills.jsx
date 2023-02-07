@@ -81,12 +81,11 @@ export const Skills = React.memo(({ headerTop, darkTheme, languageEN }) => {
   return (
     <section id="skills" className={"section " + (darkTheme ? "bg-dark-2" : "bg-light")}>
       <div className={"container " + (headerTop ? "" : "px-lg-5")}>
-
-        {languageEN
-          ? <SectionHeader darkTheme={darkTheme} section={"Skills"} title={"What i can"}/>
-          : <SectionHeader darkTheme={darkTheme} section={"Навыки"} title={"Чем я владею"}/>
-        }
-        
+        <SectionHeader
+          darkTheme={darkTheme}
+          section={languageEN ? "Skills" : "Навыки"}
+          title={languageEN ? "What i can" : "Чем я владею"}
+        />
         <div className="row">
           <div className="col-lg-11 mx-auto">
             <div className="row">

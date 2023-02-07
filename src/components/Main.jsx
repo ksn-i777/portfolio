@@ -20,34 +20,23 @@ export const Main = React.memo(({ languageEN, handleNavClick }) => {
           <div className="container my-auto">
             <div className="row">
               <div className="col-12 text-center">
-                {languageEN
-                  ? <p className="text-7 fw-500 text-white mb-2 mb-md-3">Welcome</p>
-                  : <p className="text-7 fw-500 text-white mb-2 mb-md-3">Добро пожаловать</p>
-                }
+                <p className="text-7 fw-500 text-white mb-2 mb-md-3">{languageEN ? "Welcome" : "Добро пожаловать"}</p>
                 <h2 className="text-16 fw-600 text-white mb-2 mb-md-3">
-                  {languageEN
-                    ? <Typewriter options={{strings: ["I'm Serg Hmurovich", "I'm a Front-end developer"], autoStart: true, loop: true}}/>
-                    : <Typewriter options={{strings: ["Я Хмурович Сергей", "Я Front-end разработчик"], autoStart: true, loop: true}}/>
-                  }
+                  <Typewriter
+                    options={{strings: languageEN
+                      ? ["I'm Serg Hmurovich", "I'm a Front-end developer"]
+                      : ["Я Хмурович Сергей", "Я Front-end разработчик"],
+                    autoStart: true,
+                    loop: true}}
+                  />
                 </h2>
-                {languageEN
-                  ? <p className="text-5 text-light mb-4">based in Minsk, Belarus</p>
-                  : <p className="text-5 text-light mb-4">из города Минск, Беларусь</p>
-                }
-                {languageEN
-                  ? <a
-                      href="#contact"
-                      className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
-                      onClick={(e) => {e.preventDefault(); handleNavClick("contact")}}>
-                      Hire Me
-                    </a>
-                  : <a
-                      href="#contact"
-                      className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
-                      onClick={(e) => {e.preventDefault(); handleNavClick("contacts")}}>
-                      Нанять меня
-                    </a>
-                }
+                <p className="text-5 text-light mb-4">{languageEN ? "based in Minsk, Belarus" : "из города Минск, Беларусь"}</p>
+                <a
+                  href="#contact"
+                  className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
+                  onClick={(e) => {e.preventDefault(); handleNavClick("contacts")}}>
+                  {languageEN ? "Hire Me" : "Нанять меня"}
+                </a>
               </div>
             </div>
           </div>

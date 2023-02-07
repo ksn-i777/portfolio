@@ -61,56 +61,29 @@ export const ProjectDetailsModal = React.memo(({ projectDetails, darkTheme, lang
                       }
                     </Slider>
                   </div>
-                  {languageEN
-                    ?
-                    <div className="col-md-5">
-                      <h4 className={"text-4 font-weight-600" + (darkTheme ? " text-white" : "")}>
-                        Project Info:
-                      </h4>
-                      <p>{projectDetails?.projectInfoEN}</p>
-                      <h4 className={"text-4 font-weight-600 mt-4" + (darkTheme ? " text-white" : "")}>
-                        Project Details:
-                      </h4>
-                      <ul className={"list-style-2 " + (darkTheme ? "list-style-light" : "")}>
-                        <li>
-                          <span className={"text-dark font-weight-600 me-2" + (darkTheme ? " text-white" : "")}>
-                            URL:
-                          </span>
-                          <a
-                            href={projectDetails?.url?.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {projectDetails?.url?.name}
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    :
-                    <div className="col-md-5">
-                      <h4 className={"text-4 font-weight-600" + (darkTheme ? " text-white" : "")}>
-                        Информация о проекте:
-                      </h4>
-                      <p>{projectDetails?.projectInfoRU}</p>
-                      <h4 className={"text-4 font-weight-600 mt-4" + (darkTheme ? " text-white" : "")}>
-                        Детали проекта:
-                      </h4>
-                      <ul className={"list-style-2 " + (darkTheme ? "list-style-light" : "")}>
-                        <li>
-                          <span className={"text-dark font-weight-600 me-2" + (darkTheme ? " text-white" : "")}>
-                            URL адрес:
-                          </span>
-                          <a
-                            href={projectDetails?.url?.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {projectDetails?.url?.name}
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  }
+                  <div className="col-md-5">
+                    <h4 className={"text-4 font-weight-600" + (darkTheme ? " text-white" : "")}>
+                      {languageEN ? "Project Info:" : "Информация о проекте:"}
+                    </h4>
+                    <p>{languageEN ? projectDetails?.projectInfoEN : projectDetails?.projectInfoRU}</p>
+                    <h4 className={"text-4 font-weight-600 mt-4" + (darkTheme ? " text-white" : "")}>
+                      {languageEN ? "Project Details:" : "Детали проекта:"}
+                    </h4>
+                    <ul className={"list-style-2 " + (darkTheme ? "list-style-light" : "")}>
+                      <li>
+                        <span className={"text-dark font-weight-600 me-2" + (darkTheme ? " text-white" : "")}>
+                          {languageEN ? "URL:" : "URL адрес:"}
+                        </span>
+                        <a
+                          href={projectDetails?.url?.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {projectDetails?.url?.name}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import React from "react"
-import resumeFile from "../documents/resume.pdf"
+import cvEN from "../documents/cvEN.pdf"
+import cvRU from "../documents/cvRU.pdf"
 import { SectionHeader } from "./other/SectionHeader"
 import { EducationExperience } from "./other/EducationExperience"
 
@@ -20,7 +21,7 @@ export const Resume = React.memo(({ headerTop, darkTheme, languageEN }) => {
       titleEN: "Nuclear and radiation safety engineer",
       titleRU: "Инженер по ядерной и радиационной безопасности",
       placeEN: "A.D.Sakharov ISEU, Minsk, Belarus",
-      placeRU: "МГЭУ им.А.Д.Сахарова, Минск, Беларусь",
+      placeRU: "МГЭУ им. А.Д.Сахарова, Минск, Беларусь",
       descEN: "Higher education in nuclear and radiation safety",
       descRU: "Высшее образование по ядерной и радиационной безопасности",
     },
@@ -92,12 +93,11 @@ export const Resume = React.memo(({ headerTop, darkTheme, languageEN }) => {
   return (
     <section id="resume" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
       <div className={"container " + (headerTop ? "" : "px-lg-5")}>
-
-        {languageEN
-          ? <SectionHeader darkTheme={darkTheme} section={"Resume"} title={"My background"}/>
-          : <SectionHeader darkTheme={darkTheme} section={"Резюме"} title={"Образование и опыт"}/>
-        }
-        
+        <SectionHeader
+          darkTheme={darkTheme}
+          section={languageEN ? "Resume" : "Резюме"}
+          title={languageEN ? "My background" : "Образование и опыт"}
+        />        
         <div className="row gx-5">
           <EducationExperience
             darkTheme={darkTheme}
@@ -145,16 +145,12 @@ export const Resume = React.memo(({ headerTop, darkTheme, languageEN }) => {
         {/* My Skills end */}
 
         <div className="text-center mt-5">
-          {languageEN
-            ?
-            <a className="btn btn-outline-secondary rounded-pill shadow-none" href={resumeFile} download>Download CV
-              <span className="ms-1"><i className="fas fa-download" /></span>
-            </a>
-            :
-            <a className="btn btn-outline-secondary rounded-pill shadow-none" href={resumeFile} download>Скачать резюме
-              <span className="ms-1"><i className="fas fa-download" /></span>
-            </a>
-          }
+          <a
+            className="btn btn-outline-secondary rounded-pill shadow-none"
+            href={languageEN ? cvEN : cvRU} download>
+            {languageEN ? "Download CV" : "Скачать резюме"}
+            <span className="ms-1"><i className="fas fa-download" /></span>
+          </a>
         </div>
       </div>
     </section>

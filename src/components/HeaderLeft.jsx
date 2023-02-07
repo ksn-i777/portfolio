@@ -23,38 +23,17 @@ export const HeaderLeft = React.memo(({ languageEN }) => {
             <span className="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
               <img title={languageEN ? "I'm Serg" : "Я Сергей"} src="images/profile.jpg" className="img-fluid rounded-pill d-block" alt="profile"/>
             </span>
-            {languageEN
-              ? <h1 className="text-5 text-white text-center mb-0 d-lg-block">Serg Hmurovich</h1>
-              : <h1 className="text-5 text-white text-center mb-0 d-lg-block">Хмурович Сергей</h1>
-            }
+            <h1 className="text-5 text-white text-center mb-0 d-lg-block">{languageEN ? "Serg Hmurovich" : "Хмурович Сергей"}</h1>
           </Link>
           {/* Logo End */}
           <div id="header-nav" className={isNavModalClose ? "collapse navbar-collapse w-100 my-lg-auto " : "show navbar-collapse w-100 my-lg-auto"}>
             <ul className="navbar-nav text-lg-center my-lg-auto py-lg-3">
-              {languageEN
-                ? <LinkComponent title="Main" to={'main'} setIsNavModalClose={setIsNavModalClose}/>
-                : <LinkComponent title="Главная" to={'main'} setIsNavModalClose={setIsNavModalClose}/>
-              }
-              {languageEN
-                ? <LinkComponent title="About" to={'about'} setIsNavModalClose={setIsNavModalClose}/>
-                : <LinkComponent title="Обо мне" to={'about'} setIsNavModalClose={setIsNavModalClose}/>
-              }
-              {languageEN
-                ? <LinkComponent title="Skills" to={'skills'} setIsNavModalClose={setIsNavModalClose}/>
-                : <LinkComponent title="Навыки" to={'skills'} setIsNavModalClose={setIsNavModalClose}/>
-              }
-              {languageEN
-                ? <LinkComponent title="Resume" to={'resume'} setIsNavModalClose={setIsNavModalClose}/>
-                : <LinkComponent title="Резюме" to={'resume'} setIsNavModalClose={setIsNavModalClose}/>
-              }
-              {languageEN
-                ? <LinkComponent title="Portfolio" to={'portfolio'} setIsNavModalClose={setIsNavModalClose}/>
-                : <LinkComponent title="Портфолио" to={'portfolio'} setIsNavModalClose={setIsNavModalClose}/>
-              }
-              {languageEN
-                ? <LinkComponent title="Contacts" to={'contacts'} setIsNavModalClose={setIsNavModalClose}/>
-                : <LinkComponent title="Контакты" to={'contacts'} setIsNavModalClose={setIsNavModalClose}/>
-              }
+              <LinkComponent title={languageEN ? "Main" : "Главная"} to={'main'} setIsNavModalClose={setIsNavModalClose}/>
+              <LinkComponent title={languageEN ? "About" : "Обо мне"} to={'about'} setIsNavModalClose={setIsNavModalClose}/>
+              <LinkComponent title={languageEN ? "Skills" : "Навыки"} to={'skills'} setIsNavModalClose={setIsNavModalClose}/>
+              <LinkComponent title={languageEN ? "Resume" : "Резюме"} to={'resume'} setIsNavModalClose={setIsNavModalClose}/>
+              <LinkComponent title={languageEN ? "Portfolio" : "Портфолио"} to={'portfolio'} setIsNavModalClose={setIsNavModalClose}/>
+              <LinkComponent title={languageEN ? "Contacts" : "Контакты"} to={'contacts'} setIsNavModalClose={setIsNavModalClose}/>
             </ul>
           </div>
           <ul className="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">

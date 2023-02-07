@@ -78,31 +78,16 @@ export function App() {
         </div>
 
         {/* back to top */}
-        {languageEN
-          ?
-          <Tooltip text="Back to top" placement="left">
-            <span
-              id="back-to-top"
-              className="rounded-circle"
-              style={{ display: scrollTopVisible ? "inline" : "none" }}
-              onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}}
-            >
-              <i className="fa fa-chevron-up"></i>
-            </span>
-          </Tooltip>
-          :
-          <Tooltip text="Вернуться на главную" placement="left">
-            <span
-              id="back-to-top"
-              className="rounded-circle"
-              style={{ display: scrollTopVisible ? "inline" : "none" }}
-              onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}}
-            >
-              <i className="fa fa-chevron-up"></i>
-            </span>
-          </Tooltip>
-        }
-        
+        <Tooltip text={languageEN ? "Back to top" : "Вернуться на главную"} placement="left">
+          <span
+            id="back-to-top"
+            className="rounded-circle"
+            style={{ display: scrollTopVisible ? "inline" : "none" }}
+            onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}}
+          >
+            <i className="fa fa-chevron-up"></i>
+          </span>
+        </Tooltip>
       </div>
     </>
   )

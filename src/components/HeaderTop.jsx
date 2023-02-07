@@ -34,7 +34,6 @@ export const HeaderTop = React.memo(({ languageEN, setLanguageEN, darkTheme, set
               ? <span className="setting-item" onClick={() => {setDarkTheme(!darkTheme)}}>{darkTheme ? 'DARK' : 'LIGHT'}</span>
               : <span className="setting-item" onClick={() => {setDarkTheme(!darkTheme)}}>{darkTheme ? 'ТЕМН' : 'СВЕТ'}</span>
             }
-            
           </div>
           <div className="col col-lg-8 navbar-accordion settings">
             <button
@@ -47,30 +46,12 @@ export const HeaderTop = React.memo(({ languageEN, setLanguageEN, darkTheme, set
             </button>
             <div id="header-nav" className={isNavModalClose ? "collapse navbar-collapse justify-content-center " : "show navbar-collapse justify-content-center"}>
               <ul className="navbar-nav">
-                {languageEN
-                  ? <LinkComponent title="Main" to={'main'} setIsNavModalClose={setIsNavModalClose}/>
-                  : <LinkComponent title="Главная" to={'main'} setIsNavModalClose={setIsNavModalClose}/>
-                }
-                {languageEN
-                  ? <LinkComponent title="About" to={'about'} setIsNavModalClose={setIsNavModalClose}/>
-                  : <LinkComponent title="Обо мне" to={'about'} setIsNavModalClose={setIsNavModalClose}/>
-                }
-                {languageEN
-                  ? <LinkComponent title="Skills" to={'skills'} setIsNavModalClose={setIsNavModalClose}/>
-                  : <LinkComponent title="Навыки" to={'skills'} setIsNavModalClose={setIsNavModalClose}/>
-                }
-                {languageEN
-                  ? <LinkComponent title="Resume" to={'resume'} setIsNavModalClose={setIsNavModalClose}/>
-                  : <LinkComponent title="Резюме" to={'resume'} setIsNavModalClose={setIsNavModalClose}/>
-                }
-                {languageEN
-                  ? <LinkComponent title="Portfolio" to={'portfolio'} setIsNavModalClose={setIsNavModalClose}/>
-                  : <LinkComponent title="Портфолио" to={'portfolio'} setIsNavModalClose={setIsNavModalClose}/>
-                }
-                {languageEN
-                  ? <LinkComponent title="Contacts" to={'contacts'} setIsNavModalClose={setIsNavModalClose}/>
-                  : <LinkComponent title="Контакты" to={'contacts'} setIsNavModalClose={setIsNavModalClose}/>
-                }
+                <LinkComponent title={languageEN ? "Main" : "Главная"} to={'main'} setIsNavModalClose={setIsNavModalClose}/>
+                <LinkComponent title={languageEN ? "About" : "Обо мне"} to={'about'} setIsNavModalClose={setIsNavModalClose}/>
+                <LinkComponent title={languageEN ? "Skills" : "Навыки"} to={'skills'} setIsNavModalClose={setIsNavModalClose}/>
+                <LinkComponent title={languageEN ? "Resume" : "Резюме"} to={'resume'} setIsNavModalClose={setIsNavModalClose}/>
+                <LinkComponent title={languageEN ? "Portfolio" : "Портфолио"} to={'portfolio'} setIsNavModalClose={setIsNavModalClose}/>
+                <LinkComponent title={languageEN ? "Contacts" : "Контакты"} to={'contacts'} setIsNavModalClose={setIsNavModalClose}/>
               </ul>
             </div>
           </div>

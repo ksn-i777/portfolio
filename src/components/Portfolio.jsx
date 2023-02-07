@@ -76,12 +76,11 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
     <>
       <section id="portfolio" className={"section " + (darkTheme ? "bg-dark-2" : "bg-light")}>
         <div className={"container " + (headerTop ? "" : "px-lg-5")}>
-          
-          {languageEN
-            ? <SectionHeader darkTheme={darkTheme} section={"Portfolio"} title={"My works"}/>
-            : <SectionHeader darkTheme={darkTheme} section={"Портфолио"} title={"Мои работы"}/>
-          }
-          
+          <SectionHeader
+            darkTheme={darkTheme}
+            section={languageEN ? "Portfolio" : "Портфолио"}
+            title={languageEN ? "My works" : "Мои работы"}
+          />
           <div className="portfolio popup-ajax-gallery">
             <div className="row portfolio-filter filter-container g-4">
               {projectsData.length > 0 && projectsData.map((project, index) => (

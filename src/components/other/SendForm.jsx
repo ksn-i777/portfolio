@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser"
 import "react-toastify/dist/ReactToastify.css"
 import { ToastContainer, toast } from "react-toastify"
 
-export const SendFormRU = React.memo(({ darkTheme }) => {
+export const SendForm = React.memo(({ darkTheme, languageEN }) => {
   const form = useRef()
   const [sendingMail, setSendingMail] = useState(false)
 
@@ -53,7 +53,7 @@ export const SendFormRU = React.memo(({ darkTheme }) => {
   return (
     <div className="col-md-8 col-xl-9 order-0 order-md-1">
       <h2 className={"mb-3 text-5 text-uppercase text-center text-md-start " + (darkTheme ? "text-white" : "")}>
-        Напишите мне
+        {languageEN ? "Send me a note" : "Напишите мне"}
       </h2>
       <form
         className={darkTheme ? "form-dark" : ""}
@@ -70,7 +70,7 @@ export const SendFormRU = React.memo(({ darkTheme }) => {
               type="text"
               className="form-control"
               required
-              placeholder="Имя"
+              placeholder={languageEN ? "Name" : "Имя"}
             />
           </div>
           <div className="col-xl-6">
@@ -79,7 +79,7 @@ export const SendFormRU = React.memo(({ darkTheme }) => {
               type="email"
               className="form-control"
               required
-              placeholder="Эл.почта"
+              placeholder={languageEN ? "Email" : "Эл.почта"}
             />
           </div>
           <div className="col">
@@ -88,7 +88,7 @@ export const SendFormRU = React.memo(({ darkTheme }) => {
               className="form-control"
               rows={5}
               required
-              placeholder="Расскажите мне больше о ваших потребностях"
+              placeholder={languageEN ? "Tell me more about your needs" : "Расскажите мне больше о ваших потребностях"}
               defaultValue={""}
             />
           </div>
@@ -98,11 +98,11 @@ export const SendFormRU = React.memo(({ darkTheme }) => {
             {sendingMail
               ?
               <>
-                <span role="status" aria-hidden="true" className="spinner-border spinner-border-sm align-self-center me-2"></span>
-                Отправляется.....
+                <span role="status" aria-hidden="true" class="spinner-border spinner-border-sm align-self-center me-2"></span>
+                {languageEN ? "Sending..." : "Отправляется..."}
               </>
               :
-              <>Отправить</>
+              <>{languageEN ? "Send" : "Отправить"}</>
             }
           </button>
         </p>
