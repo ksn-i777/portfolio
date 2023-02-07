@@ -3,7 +3,7 @@ import resumeFile from "../documents/resume.pdf"
 import { SectionHeader } from "./other/SectionHeader"
 import { EducationExperience } from "./other/EducationExperience"
 
-export const Background = ({ headerTop, darkTheme, languageEN }) => {
+export const Resume = React.memo(({ headerTop, darkTheme, languageEN }) => {
 
   const educationDetails = [
     {
@@ -12,8 +12,8 @@ export const Background = ({ headerTop, darkTheme, languageEN }) => {
       titleRU: "Front-end разработчик",
       placeEN: "IT-INCUBATOR, Minsk, Belarus",
       placeRU: "IT-INCUBATOR, Минск, Беларусь",
-      descEN: "Obtaining education as an front-end developer",
-      descRU: "Получение образования по специальности front-end разработчик",
+      descEN: "Education as an front-end developer",
+      descRU: "Образование по специальности front-end разработчик",
     },
     {
       yearRange: "2009 - 2015",
@@ -21,12 +21,21 @@ export const Background = ({ headerTop, darkTheme, languageEN }) => {
       titleRU: "Инженер по ядерной и радиационной безопасности",
       placeEN: "A.D.Sakharov ISEU, Minsk, Belarus",
       placeRU: "МГЭУ им.А.Д.Сахарова, Минск, Беларусь",
-      descEN: "Obtaining higher education as an engineer in nuclear and radiation safety",
-      descRU: "Получение высшего образования по специальности инженер по ядерной и радиационной безопасности",
+      descEN: "Higher education in nuclear and radiation safety",
+      descRU: "Высшее образование по ядерной и радиационной безопасности",
     },
   ]
 
   const experienceDetails = [
+    {
+      yearRange: "10.2022 - ...",
+      titleEN: "Front-end developer",
+      titleRU: "Front-end разработчик",
+      placeEN: "Project work",
+      placeRU: "Проектная работа",
+      descEN: "Web application development",
+      descRU: "Разработка веб приложений",
+    },
     {
       yearRange: "11.2020 - 01.2023",
       titleEN: "Head of Technology Design Sector",
@@ -38,7 +47,7 @@ export const Background = ({ headerTop, darkTheme, languageEN }) => {
     },
     {
       yearRange: "03.2019 - 10.2020",
-      titleEN: "Head of the sector for the development, launch and development of retail facilities",
+      titleEN: "Head of the sector for the development and launch of retail facilities",
       titleRU: "Руководитель сектора разработки, запуска и развития торговых объектов",
       placeEN: "LLC Santa Retail",
       placeRU: "ООО Санта Ритейл",
@@ -150,4 +159,4 @@ export const Background = ({ headerTop, darkTheme, languageEN }) => {
       </div>
     </section>
   )
-}
+})

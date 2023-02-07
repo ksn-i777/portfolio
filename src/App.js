@@ -1,5 +1,5 @@
 import "./App.scss"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import { commonConfig } from "./config/commonConfig"
 import { PreLoader } from "./components/other/Preloader"
 import { HeaderTop } from "./components/HeaderTop"
@@ -7,7 +7,7 @@ import { HeaderLeft } from "./components/HeaderLeft"
 import { Main } from "./components/Main"
 import { AboutMe } from "./components/AboutMe"
 import { Skills } from "./components/Skills"
-import { Background } from "./components/Background"
+import { Resume } from "./components/Resume"
 import { Portfolio } from "./components/Portfolio"
 import { Contacts } from "./components/Contacts"
 import { Footer } from "./components/Footer"
@@ -17,12 +17,12 @@ import { Tooltip } from "./components/other/Tooltip"
 export function App() {
 
   const headerTop = commonConfig.headerTop
-  const darkTheme = commonConfig.darkTheme
-  const languageEN = commonConfig.languageEN
+  const [darkTheme, setDarkTheme] = useState(true)
+  const [languageEN, setLanguageEN] = useState(true)
 
-  const handleNavClick = (section) => {
+  const handleNavClick = useCallback((section) => {
     document.getElementById(section).scrollIntoView({ behavior: "smooth" })
-  }
+  }, [])
 
   const [scrollTopVisible, setScrollTopVisible] = useState(false)
   const [isLoading, setisLoading] = useState(true)
@@ -60,15 +60,15 @@ export function App() {
         <div id="main-wrapper">
 
           {headerTop
-            ? <HeaderTop languageEN={languageEN} handleNavClick={handleNavClick}/>
-            : <HeaderLeft languageEN={languageEN} handleNavClick={handleNavClick}/>
+            ? <HeaderTop languageEN={languageEN} setLanguageEN={setLanguageEN} darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+            : <HeaderLeft languageEN={languageEN}/>
           }
 
           <div id="content" role="main">
-            <Main headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN} handleNavClick={handleNavClick}/>
+            <Main languageEN={languageEN} handleNavClick={handleNavClick}/>
             <AboutMe headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
             <Skills headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
-            <Background headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
+            <Resume headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
             <Portfolio headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
             <Contacts headerTop={headerTop} darkTheme={darkTheme} languageEN={languageEN}/>
           </div>

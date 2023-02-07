@@ -3,7 +3,7 @@ import { Link } from "react-scroll"
 import { LinkComponent } from "./other/LinkComponent"
 import { TooltipComponent } from "./other/TooltipComponent"
 
-export const HeaderLeft = ({ languageEN, handleNavClick }) => {
+export const HeaderLeft = React.memo(({ languageEN }) => {
 
   const [isNavModalClose, setIsNavModalClose] = useState(true)
   
@@ -74,4 +74,4 @@ export const HeaderLeft = ({ languageEN, handleNavClick }) => {
       </nav>
     </header>
   )
-}
+})

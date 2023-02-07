@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser"
 import "react-toastify/dist/ReactToastify.css"
 import { ToastContainer, toast } from "react-toastify"
 
-export const SendFormRU = ({ darkTheme }) => {
+export const SendFormRU = React.memo(({ darkTheme }) => {
   const form = useRef()
   const [sendingMail, setSendingMail] = useState(false)
 
@@ -110,4 +110,4 @@ export const SendFormRU = ({ darkTheme }) => {
       </form>
     </div>
   )
-}
+})

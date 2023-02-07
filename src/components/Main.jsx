@@ -2,7 +2,7 @@ import React from "react"
 import Typewriter from "typewriter-effect"
 import videobg from "../videos/main.mp4"
 
-export const Main = ({ headerTop, darkTheme, languageEN, handleNavClick }) => {
+export const Main = React.memo(({ languageEN, handleNavClick }) => {
   return (
     <section id="main">
       <div className="hero-wrap">
@@ -63,4 +63,4 @@ export const Main = ({ headerTop, darkTheme, languageEN, handleNavClick }) => {
       </div>
     </section>
   )
-}
+})

@@ -1,7 +1,7 @@
 import React from "react"
 import { Tooltip } from "./Tooltip"
 
-export const TooltipComponent = ({ title, href, iClassname }) => {
+export const TooltipComponent = React.memo(({ title, href, iClassname }) => {
   return (
     <li className={`social-icons-${title}`}>
       <Tooltip text={title} placement="top">
@@ -11,4 +11,4 @@ export const TooltipComponent = ({ title, href, iClassname }) => {
       </Tooltip>
     </li>
   )
-}
+})

@@ -1,7 +1,7 @@
 import { Tooltip as BsTooltip } from "bootstrap"
 import React, { useEffect, useRef } from "react"
 
-export const Tooltip = (p) => {
+export const Tooltip = React.memo((p) => {
   
   const childRef = useRef(undefined)
 
@@ -12,7 +12,7 @@ export const Tooltip = (p) => {
       trigger: "hover",
     })
     return () => t.dispose()
-  }, [p.text])
+  }, [p.text, p.placement])
 
   return React.cloneElement(p.children, { ref: childRef })
-}
+})

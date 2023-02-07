@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Footer = ({ headerTop, darkTheme, languageEN, handleNavClick }) => {
+export const Footer = React.memo(({ headerTop, darkTheme, languageEN, handleNavClick }) => {
   return (
     <footer id="footer" className={(darkTheme ? "footer-dark bg-dark-2" : "bg-light")}>
       <div className={"container " + (headerTop ? "" : "px-lg-5")}>
@@ -47,4 +47,4 @@ export const Footer = ({ headerTop, darkTheme, languageEN, handleNavClick }) => 
       </div>
     </footer>
   )
-}
+})

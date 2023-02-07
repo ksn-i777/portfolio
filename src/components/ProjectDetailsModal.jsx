@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 
 import Slider from "react-slick"
 
-export const ProjectDetailsModal = ({ projectDetails, darkTheme, languageEN }) => {
+export const ProjectDetailsModal = React.memo(({ projectDetails, darkTheme, languageEN }) => {
 
   const sliderRef = useRef()
 
@@ -119,4 +119,4 @@ export const ProjectDetailsModal = ({ projectDetails, darkTheme, languageEN }) =
       </div>
     </>
   )
-}
+})

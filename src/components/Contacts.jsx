@@ -5,7 +5,7 @@ import { TooltipComponent } from "./other/TooltipComponent"
 import { SendFormEN } from "./other/SendFormEN"
 import { SendFormRU } from "./other/SendFormRU"
 
-export const Contacts = ({ headerTop, darkTheme, languageEN }) => {
+export const Contacts = React.memo(({ headerTop, darkTheme, languageEN }) => {
 
   return (
     <section id="contacts" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
@@ -34,7 +34,7 @@ export const Contacts = ({ headerTop, darkTheme, languageEN }) => {
             
             <p className={"text-3 mb-1 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2"><i className="fas fa-phone" /></span>
-              +37529*******
+              +375297374777
             </p>
             <p className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2"><i className="fas fa-envelope" /></span>
@@ -58,4 +58,4 @@ export const Contacts = ({ headerTop, darkTheme, languageEN }) => {
       </div>
     </section>
   )
-}
+})

@@ -1,6 +1,6 @@
 import React from "react"
 
-export const AboutTextRU = ({ darkTheme }) => {
+export const AboutTextRU = React.memo(({ darkTheme }) => {
   return (
     <div className="col-lg-7 col-xl-8 text-center text-lg-start">
       <h2 className={"text-7 fw-600 mb-3 " + (darkTheme ? "text-white" : "")}><span>Из проектирования в программирование</span></h2>
@@ -15,4 +15,4 @@ export const AboutTextRU = ({ darkTheme }) => {
       </p>
     </div>
   )
-}
+})

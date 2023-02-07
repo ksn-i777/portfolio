@@ -3,7 +3,7 @@ import Isotope from "isotope-layout"
 import { ProjectDetailsModal } from "./ProjectDetailsModal"
 import { SectionHeader } from "./other/SectionHeader"
 
-export const Portfolio = ({ headerTop, darkTheme, languageEN }) => {
+export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
   // init one ref to store the future isotope object
   const isotope = useRef()
   // store the filter keyword in a state
@@ -120,4 +120,4 @@ export const Portfolio = ({ headerTop, darkTheme, languageEN }) => {
       </div>
     </>
   )
-}
+})

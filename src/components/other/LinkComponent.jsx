@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-scroll"
 
-export const LinkComponent = ({title, to, setIsNavModalClose}) => {
+export const LinkComponent = React.memo(({title, to, setIsNavModalClose}) => {
   return (
     <li className="nav-item">
       <Link
@@ -18,4 +18,4 @@ export const LinkComponent = ({title, to, setIsNavModalClose}) => {
       </Link>
     </li>
   )
-}
+})

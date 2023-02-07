@@ -1,6 +1,6 @@
 import React from "react"
 
-export const EducationExperience = ({ darkTheme, languageEN, titleEN, titleRU, details }) => {
+export const EducationExperience = React.memo(({ darkTheme, languageEN, titleEN, titleRU, details }) => {
   return (
     <div className="col-md-6">
       {
@@ -20,4 +20,4 @@ export const EducationExperience = ({ darkTheme, languageEN, titleEN, titleRU, d
       }
     </div>
   )
-}
+})

@@ -4,7 +4,7 @@ import { SectionHeader } from "./other/SectionHeader"
 import { AboutTextEN } from "./other/AboutTextEN"
 import { AboutTextRU } from "./other/AboutTextRU"
 
-export const AboutMe = ({ headerTop, darkTheme, languageEN }) => {
+export const AboutMe = React.memo(({ headerTop, darkTheme, languageEN }) => {
   return (
     <section id="about" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
       <div className={"container " + (headerTop ? "" : "px-lg-5")}>
@@ -82,4 +82,4 @@ export const AboutMe = ({ headerTop, darkTheme, languageEN }) => {
       </div>
     </section>
   )
-}
+})

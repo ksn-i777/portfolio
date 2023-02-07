@@ -3,7 +3,7 @@ import { useState } from "react"
 import { LinkComponent } from "./other/LinkComponent"
 import { TooltipComponent } from "./other/TooltipComponent"
 
-export const HeaderTop = ({ languageEN, handleNavClick }) => {
+export const HeaderTop = React.memo(({ languageEN, setLanguageEN, darkTheme, setDarkTheme }) => {
 
   const [stickyHeader, setStickyHeader] = useState(false)
   const [isNavModalClose, setIsNavModalClose] = useState(true)
@@ -27,8 +27,16 @@ export const HeaderTop = ({ languageEN, handleNavClick }) => {
     <header id="header" className="sticky-top-slide">
       <nav className={"primary-menu navbar navbar-expand-lg navbar-dark bg-transparent border-bottom-0 sticky-top " + (stickyHeader ? "sticky-on" : "")}>
         <div className="container-fluid position-relative g-lg-4">
-          <div className="col-auto col-lg-2"></div> {/* для разметки */}
-          <div className="col col-lg-8 navbar-accordion">
+          <div className="col-auto col-lg-2 app-style-settings">
+            <span className="setting-item" onClick={() => {setLanguageEN(!languageEN)}}>{languageEN ? 'EN' : 'РУ'}</span>
+            <span className="setting-line">|</span>
+            {languageEN
+              ? <span className="setting-item" onClick={() => {setDarkTheme(!darkTheme)}}>{darkTheme ? 'DARK' : 'LIGHT'}</span>
+              : <span className="setting-item" onClick={() => {setDarkTheme(!darkTheme)}}>{darkTheme ? 'ТЕМН' : 'СВЕТ'}</span>
+            }
+            
+          </div>
+          <div className="col col-lg-8 navbar-accordion settings">
             <button
               onClick={(e) => {setIsNavModalClose(!isNavModalClose)}}
               className={isNavModalClose ? "navbar-toggler ms-auto" : "navbar-toggler ms-auto show"}
@@ -77,4 +85,4 @@ export const HeaderTop = ({ languageEN, handleNavClick }) => {
       </nav>
     </header>
   )
-}
+})

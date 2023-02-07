@@ -1,7 +1,7 @@
 import React from "react"
 import { SectionHeader } from "./other/SectionHeader"
 
-export const Skills = ({ headerTop, darkTheme, languageEN }) => {
+export const Skills = React.memo(({ headerTop, darkTheme, languageEN }) => {
 
   const skills = [
     {
@@ -112,4 +112,4 @@ export const Skills = ({ headerTop, darkTheme, languageEN }) => {
       </div>
     </section>
   )
-}
+})
