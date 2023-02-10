@@ -28,6 +28,7 @@ export const Contacts = React.memo(({ headerTop, darkTheme, languageEN }) => {
             </p>
             <ul className={"social-icons justify-content-center justify-content-md-start " + (darkTheme ? "social-icons-muted" : "")}>
               <TooltipComponent title={'linkedin'} href={"https://www.linkedin.com/in/ksn-i777/"} iClassname={"fa-brands fa-linkedin"}/>
+              <TooltipComponent title={'telegram'} href={"https://t.me/ksn_i777"} iClassname={"fa-brands fa-telegram"}/>
               <TooltipComponent title={'github'} href={"https://github.com/ksn-i777"} iClassname={"fa-brands fa-github"}/>
               <TooltipComponent title={'codewars'} href={"https://www.codewars.com/users/ksn-i777"} iClassname={"fa-solid fa-code"}/>
             </ul>

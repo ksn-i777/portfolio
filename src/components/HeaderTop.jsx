@@ -30,10 +30,9 @@ export const HeaderTop = React.memo(({ languageEN, setLanguageEN, darkTheme, set
           <div className="col-auto col-lg-2 app-style-settings">
             <span className="setting-item" onClick={() => {setLanguageEN(!languageEN)}}>{languageEN ? 'EN' : 'РУ'}</span>
             <span className="setting-line">|</span>
-            {languageEN
-              ? <span className="setting-item" onClick={() => {setDarkTheme(!darkTheme)}}>{darkTheme ? 'DARK' : 'LIGHT'}</span>
-              : <span className="setting-item" onClick={() => {setDarkTheme(!darkTheme)}}>{darkTheme ? 'ТЕМН' : 'СВЕТ'}</span>
-            }
+            <span className="setting-item" onClick={() => {setDarkTheme(!darkTheme)}}>
+              <i className={darkTheme ? 'fa-solid fa-moon' : 'fa-solid fa-sun'} />
+            </span>
           </div>
           <div className="col col-lg-8 navbar-accordion settings">
             <button
@@ -58,6 +57,7 @@ export const HeaderTop = React.memo(({ languageEN, setLanguageEN, darkTheme, set
           <div className="col-auto col-lg-2 d-flex justify-content-end">
             <ul className="social-icons social-icons-light">
               <TooltipComponent title={'linkedin'} href={"https://www.linkedin.com/in/ksn-i777/"} iClassname={"fa-brands fa-linkedin"}/>
+              <TooltipComponent title={'telegram'} href={"https://t.me/ksn_i777"} iClassname={"fa-brands fa-telegram"}/>
               <TooltipComponent title={'github'} href={"https://github.com/ksn-i777"} iClassname={"fa-brands fa-github"}/>
               <TooltipComponent title={'codewars'} href={"https://www.codewars.com/users/ksn-i777"} iClassname={"fa-solid fa-code"}/>
             </ul>

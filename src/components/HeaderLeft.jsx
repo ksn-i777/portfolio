@@ -38,6 +38,7 @@ export const HeaderLeft = React.memo(({ languageEN }) => {
           </div>
           <ul className="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">
             <TooltipComponent title={'linkedin'} href={"https://www.linkedin.com/in/ksn-i777/"} iClassname={"fa-brands fa-linkedin"}/>
+            <TooltipComponent title={'telegram'} href={"https://t.me/ksn_i777"} iClassname={"fa-brands fa-telegram"}/>
             <TooltipComponent title={'github'} href={"https://github.com/ksn-i777"} iClassname={"fa-brands fa-github"}/>
             <TooltipComponent title={'codewars'} href={"https://www.codewars.com/users/ksn-i777"} iClassname={"fa-solid fa-code"}/>
           </ul>

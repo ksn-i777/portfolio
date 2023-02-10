@@ -17,6 +17,7 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       titleRU: "Ожидается:)",
       projectInfoEN: "",
       projectInfoRU: "",
+      technologies: "",
       url: {
         name: "",
         link: "",
@@ -25,12 +26,26 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       sliderImages: [],
     },
     {
+      titleEN: "Cards",
+      titleRU: "Карточки",
+      projectInfoEN: "Word learning application",
+      projectInfoRU: "Приложение для изучения слов",
+      technologies: "React, Redux Toolkit, TS, Axios, Formik, MUI, SASS",
+      url: {
+        name: "cards",
+        link: "",
+      },
+      thumbImage: "images/projects/cards.jpg",
+      sliderImages: [],
+    },
+    {
       titleEN: "Todolist",
       titleRU: "Тудулист",
       projectInfoEN: "Task manager",
       projectInfoRU: "Менеджер списка дел",
+      technologies: "React, Redux Toolkit, TS, Axios, Formik, MUI, TDD",
       url: {
-        name: "www.todolist.app",
+        name: "todolist",
         link: "",
       },
       thumbImage: "images/projects/todolist.jpg",
@@ -41,9 +56,10 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       titleRU: "Социальная сеть",
       projectInfoEN: "Online platform for dating, communication, creating social relationships between people",
       projectInfoRU: "Онлайн платформа для знакомств, общения, создания социальных отношений между людьми",
+      technologies: "React, Redux, TS, Axios, Redux-form",
       url: {
-        name: "www.social-network.app",
-        link: "",
+        name: "social network",
+        link: "https://ksn-i777.github.io/social-network/#/profile/26782",
       },
       thumbImage: "images/projects/socialnetwork.jpg",
       sliderImages: [],
@@ -84,7 +100,7 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
           <div className="portfolio popup-ajax-gallery">
             <div className="row portfolio-filter filter-container g-4">
               {projectsData.length > 0 && projectsData.map((project, index) => (
-                <div className={"col-sm-6 col-lg-4 filter-item"} key={index}>
+                <div className={"col-sm-6 col-lg-6 filter-item"} key={index}>
                   <div className="portfolio-box rounded">
                     <div className="portfolio-img rounded">
                       <img

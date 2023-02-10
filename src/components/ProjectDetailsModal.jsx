@@ -72,6 +72,12 @@ export const ProjectDetailsModal = React.memo(({ projectDetails, darkTheme, lang
                     <ul className={"list-style-2 " + (darkTheme ? "list-style-light" : "")}>
                       <li>
                         <span className={"text-dark font-weight-600 me-2" + (darkTheme ? " text-white" : "")}>
+                          {languageEN ? "Technologies:" : "Технологии:"}
+                        </span>
+                        {projectDetails?.technologies}
+                      </li>
+                      <li>
+                        <span className={"text-dark font-weight-600 me-2" + (darkTheme ? " text-white" : "")}>
                           {languageEN ? "URL:" : "URL адрес:"}
                         </span>
                         <a

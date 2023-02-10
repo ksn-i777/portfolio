@@ -176,6 +176,9 @@ html[dir="rtl"] #footer {
   li:hover.social-icons-linkedin a, &.social-icons-colored li.social-icons-linkedin a {
     color: $linkedin;
   }
+  li:hover.social-icons-telegram a, &.social-icons-colored li.social-icons-telegram a {
+    color: $telegram;
+  }
   li:hover.social-icons-rss a, &.social-icons-colored li.social-icons-rss a {
     color: $rss;
   }

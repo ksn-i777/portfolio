@@ -24,8 +24,8 @@ export const Main = React.memo(({ languageEN, handleNavClick }) => {
                 <h2 className="text-16 fw-600 text-white mb-2 mb-md-3">
                   <Typewriter
                     options={{strings: languageEN
-                      ? ["I'm Serg Hmurovich", "I'm a Front-end developer"]
-                      : ["Я Хмурович Сергей", "Я Front-end разработчик"],
+                      ? ["I'm Sergey Hmurovich", "I'm a Front-end developer"]
+                      : ["Я Сергей Хмурович", "Я Front-end разработчик"],
                     autoStart: true,
                     loop: true}}
                   />

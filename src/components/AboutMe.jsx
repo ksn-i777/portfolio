@@ -22,10 +22,10 @@ export const AboutMe = React.memo(({ headerTop, darkTheme, languageEN }) => {
               <ul className={"list-style-2 " + (darkTheme ? "list-style-light text-light" : "")}>
                 <li>
                   <span className="fw-600 me-2">{languageEN ? "Name:" : "Имя:"}</span>
-                  <span className="text-primary">{languageEN ? "Serg Hmurovich" : "Хмурович Сергей"}</span>
+                  <span className="text-primary">{languageEN ? "Sergey Hmurovich" : "Сергей Хмурович"}</span>
                 </li>
                 <li>
-                  <span className="fw-600 me-2">{languageEN ? "Email:" : "Эл.почта:"}</span>
+                  <span className="fw-600 me-2">{languageEN ? "Email:" : "Электронная почта:"}</span>
                   <a href="mailto:ksn_i777@mail.ru">ksn_i777@mail.ru</a>
                 </li>
                 <li>
