@@ -26,13 +26,13 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       sliderImages: [],
     },
     {
-      titleEN: "Cards",
-      titleRU: "Карточки",
-      projectInfoEN: "Word learning application",
-      projectInfoRU: "Приложение для изучения слов",
+      titleEN: "Learning cards",
+      titleRU: "Обучающие карточки",
+      projectInfoEN: "An application to learn anything",
+      projectInfoRU: "Приложение для изучения чего угодно",
       technologies: "React, Redux Toolkit, TS, Axios, Formik, MUI, SASS",
       url: {
-        name: "cards",
+        name: "learning cards",
         link: "",
       },
       thumbImage: "images/projects/cards.jpg",

@@ -11,7 +11,7 @@ export const AboutTextEN = React.memo(({ darkTheme }) => {
         However, life turned out in such a way that I had to change the scope of design from medical to commercial, and at the same time I had to study the design standards for retail facilities from scratch. It was difficult, but doable. For another 4 years I was engaged in the design of retail facilities, 3 of which as the head of this direction. I achieved good results, but the results were not the ultimate dream, and I increasingly understood that it was necessary to move on.
       </p>
       <p className={darkTheme ? "text-white-50" : ""}>
-        And now I'm a front-end developer. Behind many hours of study and as many hours of practice. There is much more to be explored. I am sure that I will succeed in this direction, because I am hardworking, diligent and moderately pedantic!
+        And now I'm a frontend developer. Behind many hours of study and as many hours of practice. There is much more to be explored. I am sure that I will succeed in this direction, because I am hardworking, diligent and moderately pedantic!
       </p>
     </div>
   )

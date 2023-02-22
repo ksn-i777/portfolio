@@ -9,12 +9,12 @@ export const Resume = React.memo(({ headerTop, darkTheme, languageEN }) => {
   const educationDetails = [
     {
       yearRange: "2022",
-      titleEN: "Front-end developer",
-      titleRU: "Front-end разработчик",
+      titleEN: "Frontend developer",
+      titleRU: "Frontend разработчик",
       placeEN: "IT-INCUBATOR, Minsk, Belarus",
       placeRU: "IT-INCUBATOR, Минск, Беларусь",
-      descEN: "Education as an front-end developer",
-      descRU: "Образование по специальности front-end разработчик",
+      descEN: "Education as an frontend developer",
+      descRU: "Образование по специальности frontend разработчик",
     },
     {
       yearRange: "2009 - 2015",
@@ -30,8 +30,8 @@ export const Resume = React.memo(({ headerTop, darkTheme, languageEN }) => {
   const experienceDetails = [
     {
       yearRange: "2022 - .....",
-      titleEN: "Front-end developer",
-      titleRU: "Front-end разработчик",
+      titleEN: "Frontend developer",
+      titleRU: "Frontend разработчик",
       placeEN: "Project work / Part-time",
       placeRU: "Проектная работа / Частичная занятость",
       descEN: "Web application development",
