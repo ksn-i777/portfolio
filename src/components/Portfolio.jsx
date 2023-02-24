@@ -28,8 +28,8 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
     {
       titleEN: "Learning cards",
       titleRU: "Обучающие карточки",
-      projectInfoEN: "An application to learn anything",
-      projectInfoRU: "Приложение для изучения чего угодно",
+      projectInfoEN: "Application for learning something",
+      projectInfoRU: "Приложение для изучения чего-либо",
       technologies: "React, Redux Toolkit, TS, Axios, Formik, MUI, SASS",
       url: {
         name: "learning cards",
