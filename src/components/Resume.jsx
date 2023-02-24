@@ -29,7 +29,7 @@ export const Resume = React.memo(({ headerTop, darkTheme, languageEN }) => {
 
   const experienceDetails = [
     {
-      yearRange: "2022 - .....",
+      yearRange: "05.2022 - .....",
       titleEN: "Frontend developer",
       titleRU: "Frontend разработчик",
       placeEN: "Project work / Part-time",
