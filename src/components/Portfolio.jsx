@@ -46,7 +46,7 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       technologies: "React, Redux Toolkit, TS, Axios, Formik, MUI, TDD",
       url: {
         name: "todolist",
-        link: "",
+        link: "https://ksn-i777.github.io/todolist/",
       },
       thumbImage: "images/projects/todolist.jpg",
       sliderImages: [],
@@ -59,7 +59,7 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       technologies: "React, Redux, TS, Axios, Redux-form",
       url: {
         name: "social network",
-        link: "https://ksn-i777.github.io/social-network/#/profile/26782",
+        link: "https://ksn-i777.github.io/social-network/",
       },
       thumbImage: "images/projects/socialnetwork.jpg",
       sliderImages: [],
