@@ -33,7 +33,7 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       technologies: "React, Redux Toolkit, TS, Axios, Formik, MUI, SASS",
       url: {
         name: "learning cards",
-        link: "",
+        link: "https://viziter25.github.io/cards/",
       },
       thumbImage: "images/projects/cards.jpg",
       sliderImages: [],
