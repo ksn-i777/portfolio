@@ -64,6 +64,32 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       thumbImage: "images/projects/socialnetwork.jpg",
       sliderImages: [],
     },
+    {
+      titleEN: "Notes",
+      titleRU: "Заметки",
+      projectInfoEN: "Note taking application",
+      projectInfoRU: "Приложение для создания заметок",
+      technologies: "React, Redux Toolkit, TS, MUI, SASS",
+      url: {
+        name: "notes",
+        link: "https://ksn-i777.github.io/notes/",
+      },
+      thumbImage: "images/projects/notes.jpg",
+      sliderImages: [],
+    },
+    {
+      titleEN: "Counter",
+      titleRU: "Счетчик",
+      projectInfoEN: "Application for counting the amount of something",
+      projectInfoRU: "Приложение для подсчета количества чего-либо",
+      technologies: "React, Redux, TS",
+      url: {
+        name: "counter",
+        link: "https://ksn-i777.github.io/counter-second-version-redux-used-advanced/",
+      },
+      thumbImage: "images/projects/counter.jpg",
+      sliderImages: [],
+    },
   ]
 
   // initialize an Isotope object with configs
