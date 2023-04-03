@@ -65,6 +65,19 @@ export const Portfolio = React.memo(({ headerTop, darkTheme, languageEN }) => {
       sliderImages: [],
     },
     {
+      titleEN: "Constructor calculator",
+      titleRU: "Калькулятор конструктора",
+      projectInfoEN: "Calculator for calculating the frame with sheet covering",
+      projectInfoRU: "Калькулятор для расчета каркаса с покрытием листов",
+      technologies: "React, Redux, TS, SASS",
+      url: {
+        name: "сonstructor calculator",
+        link: "https://ksn-i777.github.io/frame-calculator/",
+      },
+      thumbImage: "images/projects/framecalculator.jpg",
+      sliderImages: [],
+    },
+    {
       titleEN: "Notes",
       titleRU: "Заметки",
       projectInfoEN: "Note taking application",
